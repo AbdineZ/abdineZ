@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdine Chikens – Poulets de chair et œufs frais</title>
+<meta name="description" content="Poulets de chair, poulets abattus et plumés, œufs frais. Choisissez, voyez le total, commandez sur WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--o:#f4502b;--d:#1c1b22;--c:#efebe4;--g:#dcdad2;--mut:#5f5d66;--h:60px;
+--disp:"Anton","Arial Narrow",Impact,sans-serif;--body:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--c);color:var(--d);font-family:var(--body);line-height:1.5;padding-bottom:90px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--o);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section[id]{scroll-margin-top:var(--h)}
+
+/* Header */
+.top{position:sticky;top:0;z-index:40;height:var(--h);background:var(--c);border-bottom:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo i{display:block;width:28px;height:24px;background:var(--o);transform:skewX(-18deg);clip-path:polygon(0 0,100% 0,100% 30%,40% 30%,40% 100%,0 100%)}
+.logo b{display:block;font:400 26px/1 var(--disp);letter-spacing:.02em;text-transform:uppercase}
+.logo small{display:block;font-size:9px;letter-spacing:.4em;font-weight:600;color:var(--mut);margin-top:2px}
+.prog{position:absolute;left:0;bottom:-1px;height:3px;width:0;background:var(--o)}
+.btn{display:inline-block;font:800 15px var(--body);text-decoration:none;border:0;padding:13px 20px;background:var(--d);color:#fff;cursor:pointer;clip-path:polygon(0 0,100% 0,100% 72%,92% 100%,0 100%)}
+.btn.o{background:var(--o);color:#fff;padding:11px 16px;font-size:14px}
+.btn:hover{filter:brightness(1.12)}
+.lnk{font-weight:600;font-size:15px;margin-left:18px}
+
+/* Typography */
+.tag{display:inline-flex;gap:8px;align-items:center;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin:0 0 14px}
+.tag em{font-style:normal;color:var(--o);letter-spacing:-.15em}
+h1,h2{font-family:var(--disp);font-weight:400;text-transform:uppercase;line-height:.95;margin:0 0 18px;letter-spacing:.005em}
+h1{font-size:clamp(50px,13vw,112px)}
+h2{font-size:clamp(46px,11vw,84px)}
+.lead{font-size:17px;max-width:40ch;margin:0 0 14px}
+.lead.b{font-weight:800}
+.acts{margin-top:22px;display:flex;align-items:center;flex-wrap:wrap}
+
+/* Sections with angled top */
+.hero{padding:40px 0 70px}
+.sec{position:relative;margin-top:-34px;padding:84px 0 64px;clip-path:polygon(0 34px,42% 0,100% 0,100% 100%,0 100%);--acc:var(--o)}
+.sec::after{content:"";position:absolute;top:0;left:42%;width:120px;height:16px;background:var(--acc);transform:skewX(-40deg) translateX(-260px);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.sec.in::after{transform:skewX(-40deg)}
+.s-cream{background:var(--c)} .s-grey{background:var(--g)}
+.s-orange{background:var(--o);color:#fff;--acc:var(--d)} .s-orange .tag em{color:var(--d)}
+.dark{background:var(--d);color:#fff}
+.two{display:grid;gap:30px;align-items:center}
+@media(min-width:860px){.two{grid-template-columns:1.05fr .95fr;gap:60px}.two.rev .shot{order:-1}}
+.chip{display:inline-block;background:var(--d);color:#fff;font:800 12px var(--body);padding:4px 8px;margin-right:10px}
+.s-orange .chip{background:#fff;color:var(--d)}
+.meta{border-top:1px solid currentColor;border-bottom:1px solid currentColor;padding:12px 0;margin:18px 0;max-width:420px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.meta small{font-size:13px;opacity:.75}
+.meta b{font:400 28px var(--disp);letter-spacing:.02em}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:52px;height:52px;border:0;background:var(--d);color:#fff;font:700 26px/1 var(--body);cursor:pointer;clip-path:polygon(0 0,100% 0,100% 70%,70% 100%,0 100%)}
+.s-orange .qty button{background:#fff;color:var(--d)}
+.qty button:hover{background:var(--o);color:#fff}
+.s-orange .qty button:hover{background:var(--d);color:#fff}
+.qty output{min-width:58px;text-align:center;font:400 40px/1 var(--disp)}
+
+/* Image frames */
+.shot{position:relative;aspect-ratio:1/1;max-width:520px;width:100%;overflow:hidden;display:grid;place-items:center;clip-path:polygon(0 0,100% 0,100% 90%,90% 100%,0 100%);background:var(--o)}
+.shot::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px);background-size:20% 20%}
+.shot::after{content:"";position:absolute;left:14px;top:14px;width:18px;height:18px;border-left:2px solid rgba(255,255,255,.75);border-top:2px solid rgba(255,255,255,.75)}
+.shot.sh-d{background:#2a2932}
+.shot.sh-d::before{background-image:linear-gradient(rgba(244,80,43,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(244,80,43,.22) 1px,transparent 1px)}
+.shot .f{position:relative;display:grid;place-items:center;width:100%;height:100%;will-change:transform}
+.shot .e{font-size:clamp(120px,34vw,240px);line-height:1;filter:drop-shadow(0 22px 18px rgba(0,0,0,.28));animation:fl 5s ease-in-out infinite}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mini{position:absolute;font-size:56px;animation:fl 4s ease-in-out -2s infinite;filter:drop-shadow(0 10px 8px rgba(0,0,0,.25))}
+.cap{position:absolute;right:12px;bottom:12px;background:var(--d);color:#fff;font:600 12px var(--body);padding:6px 10px}
+.cap em{font-style:normal;color:var(--o);margin-right:6px}
+@keyframes fl{50%{transform:translateY(-14px) rotate(-3deg)}}
+
+/* Tiles */
+.tiles{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:26px}
+.tile{display:block;text-decoration:none;background:var(--c);color:var(--d);transition:transform .25s}
+.tile:hover{transform:translateY(-6px)}
+.tile .im{position:relative;aspect-ratio:4/3;background:var(--g);display:grid;place-items:center;font-size:64px}
+.tile .im b{position:absolute;left:8px;top:8px;background:var(--d);color:#fff;font:800 11px var(--body);padding:2px 7px}
+.tile p{margin:0;padding:10px 12px;font:800 14px var(--body);display:flex;justify-content:space-between}
+
+/* Order */
+.order{display:grid;gap:18px;margin-top:26px}
+@media(min-width:820px){.order{grid-template-columns:1fr 1fr}}
+.box{background:#26252e;border:1px solid #373641;padding:22px}
+.box h3{margin:0 0 14px;font:400 26px var(--disp);text-transform:uppercase;letter-spacing:.02em}
+.lines{list-style:none;margin:0;padding:0}
+.lines li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed #4a4955}
+.empty{opacity:.65}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px}
+.total b{font:400 44px var(--disp);color:var(--o)}
+.note{font-size:13px;opacity:.7;margin:10px 0 0}
+label{display:block;font-weight:600;font-size:14px;margin:0 0 6px}
+input,textarea,select{width:100%;font:inherit;padding:12px 14px;border:1.5px solid #3f3e4a;background:var(--d);color:#fff;margin-bottom:14px;border-radius:0}
+input::placeholder,textarea::placeholder{color:#8b8995}
+input:focus,textarea:focus,select:focus{border-color:var(--o);outline:none}
+textarea{min-height:76px;resize:vertical}
+.send{width:100%;border:0;background:var(--o);color:#fff;font:800 18px var(--body);padding:16px;cursor:pointer;clip-path:polygon(0 0,100% 0,100% 70%,96% 100%,0 100%)}
+.send:hover{filter:brightness(1.1)}
+.send:disabled{background:#55535f;cursor:not-allowed;filter:none}
+.err{color:#ff9d88;font-size:14px;min-height:20px;margin:0 0 8px}
+.foot{margin-top:34px;font-size:14px;opacity:.7}
+
+/* Sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:35;background:var(--c);border-top:3px solid var(--o);padding:10px 0 calc(10px + env(safe-area-inset-bottom,0px))}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bar small{display:block;font-size:13px;color:var(--mut)}
+.bar strong{font:400 30px/1 var(--disp);letter-spacing:.02em}
+.bump{animation:bump .35s}
+@keyframes bump{40%{transform:scale(1.14)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.sec::after{transform:skewX(-40deg)}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="#" aria-label="Abdine Chikens, accueil"><i></i><span><b>Abdine</b><small>CHIKENS</small></span></a>
+  <a class="btn o" href="#commande">Commander ↗</a>
+  <div class="prog" id="prog"></div>
+</header>
+
+<section class="hero">
+  <div class="wrap two">
+    <div>
+      <p class="tag"><em>///</em>Poulets &amp; œufs frais</p>
+      <h1>Poulets, œufs &amp; poulets plumés.</h1>
+      <p class="lead">Choisissez vos produits, voyez le total, puis envoyez votre commande sur WhatsApp.</p>
+      <div class="acts"><a class="btn" href="#produits">Voir les produits ↓</a><a class="lnk" href="#commande">Commander ↗</a></div>
+    </div>
+    <div class="shot" data-p><span class="f"><span class="e">🐔</span><span class="mini" style="right:12%;bottom:16%">🥚</span><span class="mini" style="left:10%;top:18%;font-size:44px">🥚</span></span><span class="cap"><em>■</em>Abdine Chikens</span></div>
+  </div>
+</section>
+
+<section class="sec dark" id="produits">
+  <div class="wrap">
+    <p class="tag"><em>///</em>Notre choix</p>
+    <h2>Les trois produits.</h2>
+    <p class="lead">Touchez un produit pour choisir la quantité, ou faites défiler la page.</p>
+    <div class="tiles" id="tiles"></div>
+  </div>
+</section>
+
+<div id="prods"></div>
+
+<section class="sec dark" id="commande">
+  <div class="wrap">
+    <p class="tag"><em>///</em>Dernière étape</p>
+    <h2>Votre commande.</h2>
+    <p class="lead">Remplissez vos informations, puis envoyez sur WhatsApp.</p>
+    <div class="order">
+      <div class="box">
+        <h3>Récapitulatif</h3>
+        <ul class="lines" id="lines"></ul>
+        <div class="total"><span>Total</span><b id="total">0 FCFA</b></div>
+        <p class="note">Total indicatif. Le prix final est confirmé avec vous sur WhatsApp.</p>
+      </div>
+      <div class="box">
+        <h3>Vos informations</h3>
+        <label for="nom">Votre nom</label>
+        <input id="nom" autocomplete="name" placeholder="Ex : Awa Traoré">
+        <label for="mode">Réception</label>
+        <select id="mode"><option>Livraison</option><option>Je viens récupérer</option></select>
+        <label for="lieu">Quartier / adresse</label>
+        <input id="lieu" autocomplete="street-address" placeholder="Ex : Secteur 22, près du marché">
+        <label for="msg">Message (facultatif)</label>
+        <textarea id="msg" placeholder="Ex : Livraison demain matin si possible"></textarea>
+        <p class="err" id="err" role="alert"></p>
+        <button class="send" id="send" disabled>💬 Commander sur WhatsApp</button>
+      </div>
+    </div>
+    <p class="foot">Abdine Chikens · WhatsApp +226 74 53 17 10</p>
+  </div>
+</section>
+
+<div class="bar">
+  <div class="wrap">
+    <div><small id="count">Panier vide</small><strong id="barTotal">0 FCFA</strong></div>
+    <a class="btn" href="#commande">Commander ↗</a>
+  </div>
+</div>
+
+<script>
+/* ===== À MODIFIER ===== */
+const WHATSAPP = "22674531710";   // numéro du vendeur, sans + ni espaces
+const PRODUCTS = [                // ⚠️ prix d’exemple : à remplacer par les vrais prix
+  { id:"vif",   name:"Poulet de chair vivant", tile:"Poulets de chair", title:"Poulets de chair.", tag:"Poulet vivant", lead:"Choisissez le nombre de poulets.", desc:"Précisez la taille souhaitée dans votre message avant d’envoyer.", price:3500, unit:"le poulet", emoji:"🐔", cap:"Poulet de chair", cls:"s-cream", shot:"", img:"" },
+  { id:"plume", name:"Poulet abattu et plumé", tile:"Poulets plumés", title:"Poulets plumés.", tag:"Déjà plumé", lead:"Déjà tué et plumé.", desc:"Vous gagnez du temps : le poulet est déjà préparé.", price:4000, unit:"le poulet", emoji:"🍗", cap:"Poulet plumé", cls:"s-grey", shot:"sh-d", img:"" },
+  { id:"oeufs", name:"Œufs frais", tile:"Œufs frais", title:"Œufs frais.", tag:"Œufs", lead:"Vendus par plateau.", desc:"Un plateau contient 30 œufs.", price:2500, unit:"le plateau de 30", emoji:"🥚", cap:"Plateau d’œufs", cls:"s-orange", shot:"sh-d", img:"" }
+]; /* pour une vraie photo : img:"photos/poulet.jpg" */
+/* ====================== */
+
+const qty = {}; PRODUCTS.forEach(p => qty[p.id] = 0);
+const $ = id => document.getElementById(id);
+const fmt = n => n.toLocaleString("fr-FR").replace(/[\u202f\u00a0]/g," ") + " FCFA";
+const pic = p => p.img ? `<img src="${p.img}" alt="${p.name}">` : `<span class="e">${p.emoji}</span>`;
+
+$("tiles").innerHTML = PRODUCTS.map((p,i) => `<a class="tile" href="#${p.id}"><div class="im"><b>0${i+1}</b>${p.emoji}</div><p>${p.tile} <span>↓</span></p></a>`).join("");
+
+$("prods").innerHTML = PRODUCTS.map((p,i) => `
+<section class="sec ${p.cls}" id="${p.id}">
+  <div class="wrap two ${i%2?"rev":""}">
+    <div>
+      <p class="tag"><span class="chip">0${i+1}</span><em>///</em>${p.tag}</p>
+      <h2>${p.title}</h2>
+      <p class="lead b">${p.lead}</p>
+      <p class="lead">${p.desc}</p>
+      <div class="meta"><small>Prix</small><b>${fmt(p.price)} <small>${p.unit}</small></b></div>
+      <div class="qty">
+        <button type="button" data-id="${p.id}" data-d="-1" aria-label="Retirer : ${p.name}">−</button>
+        <output id="q-${p.id}" aria-live="polite">0</output>
+        <button type="button" data-id="${p.id}" data-d="1" aria-label="Ajouter : ${p.name}">+</button>
+      </div>
+    </div>
+    <div class="shot ${p.shot}" data-p><span class="f">${pic(p)}</span><span class="cap"><em>■</em>${p.cap}</span></div>
+  </div>
+</section>`).join("");
+
+document.addEventListener("click", e => {
+  const b = e.target.closest("button[data-id]"); if (!b) return;
+  qty[b.dataset.id] = Math.max(0, Math.min(99, qty[b.dataset.id] + Number(b.dataset.d)));
+  render(true);
+});
+
+const items = () => PRODUCTS.filter(p => qty[p.id] > 0);
+const total = () => PRODUCTS.reduce((s,p) => s + p.price * qty[p.id], 0);
+
+function render(bump){
+  PRODUCTS.forEach(p => $("q-"+p.id).textContent = qty[p.id]);
+  const list = items(), t = total(), n = list.reduce((s,p) => s + qty[p.id], 0);
+  $("lines").innerHTML = list.length
+    ? list.map(p => `<li><span>${qty[p.id]} × ${p.name}</span><b>${fmt(p.price*qty[p.id])}</b></li>`).join("")
+    : `<li class="empty">Aucun produit choisi pour l’instant.</li>`;
+  $("total").textContent = fmt(t);
+  $("barTotal").textContent = fmt(t);
+  $("count").textContent = n ? `${n} article${n>1?"s":""}` : "Panier vide";
+  $("send").disabled = n === 0;
+  if (bump){ const s = $("barTotal"); s.classList.remove("bump"); void s.offsetWidth; s.classList.add("bump"); }
+}
+
+$("send").addEventListener("click", () => {
+  const nom = $("nom").value.trim(), lieu = $("lieu").value.trim(), m = $("msg").value.trim();
+  if (!nom || !lieu){ $("err").textContent = "Indiquez votre nom et votre quartier ou adresse."; return; }
+  $("err").textContent = "";
+  const lignes = items().map(p => `• ${qty[p.id]} × ${p.name} (${fmt(p.price)} ${p.unit}) = ${fmt(p.price*qty[p.id])}`).join("\n");
+  const msg = `Bonjour Abdine Chikens, je souhaite passer commande :\n\n${lignes}\n\nTotal : ${fmt(total())}\n\nNom : ${nom}\nRéception : ${$("mode").value}\nQuartier / adresse : ${lieu}` + (m ? `\nMessage : ${m}` : "") + `\n\nMerci !`;
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
+});
+
+/* Mouvement : barre de progression, images qui bougent au défilement, formes qui glissent */
+const still = matchMedia("(prefers-reduced-motion:reduce)").matches;
+const fr = [...document.querySelectorAll("[data-p] .f")];
+let tick = false;
+function onScroll(){
+  tick = false;
+  const h = innerHeight, max = document.documentElement.scrollHeight - h;
+  $("prog").style.width = (max > 0 ? scrollY / max * 100 : 0) + "%";
+  if (still) return;
+  fr.forEach(el => {
+    const r = el.parentElement.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > h) return;
+    const off = (r.top + r.height/2 - h/2) / h;
+    el.style.transform = `translateY(${(off * -40).toFixed(1)}px) rotate(${(off * 6).toFixed(2)}deg)`;
+  });
+}
+addEventListener("scroll", () => { if (!tick){ tick = true; requestAnimationFrame(onScroll); } }, {passive:true});
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add("in"); }), {threshold:.15});
+document.querySelectorAll(".sec").forEach(s => io.observe(s));
+render(); onScroll();
+</script>
+</body>
+</html>
